@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Blank Cordova Mobile App Template</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+    <style>
+        /* following two viewport lines are equivalent to meta viewport statement above, and is needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport {
+            width: 100vw;
+            min-zoom: 100%;x
+            zoom: 100%;
+        }
+
+        @viewport {
+            width: 100vw;
+            min-zoom: 100% zoom: 100%;
+        }
+
+        @-ms-viewport {
+            user-zoom: fixed;
+            min-zoom: 100%;
+        }
+
+        @viewport {
+            user-zoom: fixed;
+            min-zoom: 100%;
+        }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+
+    <!-- See explanation at the bottom of this file for info regarding placement of JS libraries. -->
+    <!-- These library references (below) are just examples to give you the general idea... -->
+    <!-- <script src="lib/mc/hammer.js"></script> -->
+    <!-- <script src="lib/ft/fastclick.js"></script> -->
+    <!-- <script src="lib/jq/jquery.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+</head>
+
+
+<body onLoad="onBodyLoad(), startSession(), setApi2();">
+    <h1 class="align-center">RICOH THETA JavaScript Framework</h1>
+    <p class="align-center">
+        <img src="img/theta.png">
+    </p>
+
+    <p class="align-center">
+        Build mobile apps with the
+        <a href="https://developers.theta360.com/en/docs/v2.1/api_reference/">RICOH THETA API</a>
+
+    </p>
+    <br>
+    <p class="align-center">
+        <ol>
+            <li> <button class="w3-button w3-blue w3-round" id="id_btn2">Get THETA Info</button></li>
+            <!--<li> <button class="w3-button w3-green w3-round" id="id_btnHello">Start Session</button></li>
+            <li> <button class="w3-button w3-gray w3-round" id="id_btn4">Set API v2.1</button></li>-->
+            <li> <button class="w3-button w3-khaki w3-round" id="id_btn3">Take Picture</button></li>
+        </ol>
+    </p>
+    
+    <div class="align-center" role="main" class="ui-content">
+        <button class="w3-button w3-red w3-round" id="testButton" data-role="button">Test Button</button>
+    </div>
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging weinre script URL here, if it does not work below. -->
+        <!-- See <head> section above for additional JS libraries loaded as part of this application. -->
+        <!-- "Phantom" cordova.js required for projects that use Cordova plugins. -->
+        <script src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/app.js"></script>
+
+
+        <!-- for your init code, see README and file comments for details -->
+
+        <script src="js/init-app.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script src="xdk/init-dev.js"></script>
+
+        <!-- Loads the jquery libraries -->
+        <script src="scripts/jquery-1.8.0.min.js"></script>
+        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging weinre script URL here, if it does not work above. -->
+</body>
+
+</html>
